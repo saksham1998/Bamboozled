@@ -1,6 +1,6 @@
 # Bamboozled
-If you don't know the refrence of the title, It was the game played by Ross and Chandler in FRIENDS.
 
+If you don't know the refrence of the title, It was the game played by Ross and Chandler in FRIENDS.
 
 A simple quiz game ,with different categories to choose from..
 
@@ -26,6 +26,6 @@ Please feel free to post any problems you are facing.....
 
 I hope that the app will provide you enternaiment as well as increase your knowledge in your favorite topic.
 
-Thank You,Saksham :)
+With ❤,Saksham :)
 
 
