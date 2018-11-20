@@ -10,6 +10,8 @@ A simple quiz game ,with different categories to choose from..
 7. Points will be maintained with every question and keep on showing at the top of the screen.
 8. Result will shown after the end of the game with Percentage of correct answers given.
 
+Visit the website  : https://bamboozled.netlify.com/;
+
 Quiz API used : https://opentdb.com/api_config.php
 
 This app consist of many third party source code and ideas
