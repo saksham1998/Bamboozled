@@ -1,6 +1,5 @@
 # Bamboozled
-If you don't know the refrence of the title, It was the game played by Ross and Chandler and Hosted by Almighty 'Joey'.in FRIENDS.
-And its all because I Love F.R.I.E.N.D.S :)
+If you don't know the refrence of the title, It was the game played by Ross and Chandler in FRIENDS.
 
 
 A simple quiz game ,with different categories to choose from..
