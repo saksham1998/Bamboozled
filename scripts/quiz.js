@@ -20,11 +20,11 @@ function openNav() {
 
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
-  quizGenerator();
 }
 
 function resultNav() {
 	ratio = (correct/(totalQues-1))*100;
+	ratio = ratio.toPrecision(2);
 if(ratio==NaN)ratio=0;
 
   document.getElementById("resultNav").style.height = "100%";

@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bamboozled</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129510438-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-129510438-1');
+</script>
+
+	<title>Bamboozled - Prove your Knowledge!</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto|Mali" rel="stylesheet">
@@ -33,7 +43,7 @@
    		<li id='greet' style="font-size: 40px"></li>
    		<li id='showScore'style="font-size: 40px;"></li>
    	</ol>
-   	<p style="color: white;position: absolute;right: 3px;bottom: 12px;">Got a sec, Rate the app!</p>
+   	<p id='rate-app'>Got a sec, Rate the app!</p>
    	<div style="position: absolute;bottom: 0;right: 0;">
    		<fieldset class="rating">
     <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
@@ -48,7 +58,7 @@
     <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
 		</fieldset>
    	</div>
-   	<p style="color: white;font-weight: bolder;font-family: mali;margin-top: 22%;width: 250px; ">Got any suggestions,Mail me @ sakshammanocha14@gmail.com -
+   	<p id='email-info'>Got any suggestions,Mail me @ sakshammanocha14@gmail.com -
   	<span style="color: red;">&#10084;</span> Saksham :)</p>
   </div>
 </div>
@@ -74,7 +84,7 @@
 	</div>	
 </div>
 <button id="next" onclick="quizGenerator(),move()">Next</button>
-<div style="position: absolute;bottom: 3px;font-size: 25px;font-family: mali;font-weight: bolder;"><a href="index.html">Go Back!</a></div>
+<div id='go-back'><a href="index.html">Go Back!</a></div>
 <script src="scripts/quiz.js"></script>
 </body>
 </html>
