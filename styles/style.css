@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('image.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#header{
+  text-align: center;
+  font-family: roboto;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  color: #B5BAC3;
+  font-weight: bolder;
+  font-size: 125%;
+}
+
+#regForm {
+  background-color:#162633;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+  border-radius: 25px;
+}
+
+input {
+  padding: 15px;
+  width: 100%;
+  font-size: 23px;
+  font-family: mali;
+  text-transform: capitalize;
+  border: 3px solid blue;
+  border-radius:10px;
+  letter-spacing: 3px;
+}
+
+select{
+  padding: 15px;
+  width: 100%;
+  font-size: 17px;
+  font-family: mali;
+  border: 3px solid blue;
+  border-radius:10px;
+  letter-spacing: 3px;
+}
+
+select option{
+  font-family: mali;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  font-size: 85%;
+  color: black;
+
+}
+
+ option:hover {
+  color: black;
+  font-size: 100%;
+}
+
+input:focus {
+  background-color: #C3CBD8;
+}
+
+select:focus{
+  background-color: #C3CBD8;
+}
+
+input.invalid {
+  background-color: #BDE7E8;
+}
+
+.tab {
+  display: none;
+}
+
+.title{
+  font-weight: bolder;
+  font-size: 25px;
+  color: silver;
+}
+
+button {
+  margin-top: 15px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+.step.finish {
+  background-color: blue;
+}

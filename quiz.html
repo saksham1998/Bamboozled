@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bamboozled</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto|Mali" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/quiz.css">
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link rel="icon" type="text/css" href="styles/favicon.png">
+</head>
+<body onload="quizGenerator(),move()">
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+  	<ol>
+  		<li>Their will be 'N' no. of questions,depending upon the user selections.</li>
+  		<li>Questions will be in the form of multiple choice.</li>
+  		<li>Every question will have 4 choices.1 correct and 3 incorrect.</li>
+  		<li>Every correct answer will increase user-points by 10.</li>
+  		<li>Every incorrect answer will decrease user-points by 5.</li>
+  		<li>Minimum points that can be maintained is 0.</li>
+  		<li>Every Ques. will be given with the time limit of 15sec.Passing that, the ques. would be considered with an incorrect answer</li>
+  		<li>After the compeletion of the game, the result would be shown,depending upon the score.</li>
+  	</ol>
+  	<p style="position: relative;bottom: 0;left: 0;color: white;font-weight: bolder;font-family: mali ">Designed and Devolped with 
+  	<span style="color: red;">&#10084;</span>  by <a style="font-weight: bolder;font-size: 125%" href="https://github.com/saksham1998">Saksham</a> :)</p>
+  </div>
+  <div id="resultNav" class="resultOverlay">
+  <a href="javascript:void(1)" class="closebtn" onclick="closeResultNav()" style="font-size: 35px;">&times;</a>
+  <div class="overlay-content">
+   	<ol>
+   		<li id='greet' style="font-size: 40px"></li>
+   		<li id='showScore'style="font-size: 40px;"></li>
+   	</ol>
+   	<p style="color: white;position: absolute;right: 3px;bottom: 12px;">Got a sec, Rate the app!</p>
+   	<div style="position: absolute;bottom: 0;right: 0;">
+   		<fieldset class="rating">
+    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+		</fieldset>
+   	</div>
+   	<p style="color: white;font-weight: bolder;font-family: mali;margin-top: 22%;width: 250px; ">Got any suggestions,Mail me @ sakshammanocha14@gmail.com -
+  	<span style="color: red;">&#10084;</span> Saksham :)</p>
+  </div>
+</div>
+
+</div>
+<br>
+<span id='rules' onclick="openNav()">&#9776; Rules</span>
+<div id="timer">Timer</div>
+<div id="scoreboard">
+	<p id="scores"></p><p style="margin-top: -20px;"><sup id='score-category'>Category :</sup></p>
+</div>
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+
+<div id='quiz-container'>
+	<div id='quiz-ques'></div>
+	<div id='quiz-options'>
+		<p class="option" onclick="this.style.backgroundColor = check(this.innerHTML)"></p>
+		<p class="option" onclick="this.style.backgroundColor = check(this.innerHTML)"></p>
+		<p class="option" onclick="this.style.backgroundColor = check(this.innerHTML)"></p>
+		<p class="option" onclick="this.style.backgroundColor = check(this.innerHTML)"></p>
+	</div>	
+</div>
+<button id="next" onclick="quizGenerator(),move()">Next</button>
+<div style="position: absolute;bottom: 3px;font-size: 25px;font-family: mali;font-weight: bolder;"><a href="index.html">Go Back!</a></div>
+<script src="scripts/quiz.js"></script>
+</body>
+</html>
