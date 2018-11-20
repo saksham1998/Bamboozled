@@ -14,7 +14,7 @@ Visit the website  : https://bamboozled.netlify.com/;
 
 Quiz API used : https://opentdb.com/api_config.php
 
-This app consist of many third party source code and ideas
+This app consist of many third party source code and ideas.
 So binding it all,Thank You!
 
   
@@ -23,5 +23,6 @@ Please feel free to post any problems you are facing.....
 
 I hope that the app will provide you enternaiment as well as increase your knowledge in your favorite topic.
 
+Thank You,Saksham :)
 
 
