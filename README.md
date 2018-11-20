@@ -1,4 +1,7 @@
 # Bamboozled
+![alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKM5gp4GRQhK5dKW5xEz-iaPagkSkclwSH87ZqWhDur9j5P7BC)
+The One Where You'll Prove Your Knowledge
+
 
 If you don't know the refrence of the title, It was the game played by Ross and Chandler in FRIENDS.
 
