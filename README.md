@@ -1,4 +1,8 @@
 # Bamboozled
+If you don't know the refrence of the title, It was the game played by Ross and Chandler and Hosted by Almighty 'Joey'.in FRIENDS.
+And its all because I Love F.R.I.E.N.D.S :)
+
+
 A simple quiz game ,with different categories to choose from..
 
 1. Its a very simple game where user would decide category of question,amount of questions to be asked and its difficulty.
