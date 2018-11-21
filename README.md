@@ -24,8 +24,8 @@ A simple quiz game ,with different categories to choose from..
 1. https://www.w3schools.com/
 2. https://stackoverflow.com/
 3. https://codepen.io/
+4. Quiz API used : https://opentdb.com/api_config.php 
 
-Quiz API used : https://opentdb.com/api_config.php
 
   
 Any queries,suggestions and problems are very important for the advancement of the app,for that please mail me at sakshammanocha14@gmail.com.
