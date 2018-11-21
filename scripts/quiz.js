@@ -2,10 +2,12 @@ var quesEl = document.getElementById('quiz-ques');
 var optionsEl = document.getElementsByClassName('option');
 var scoresEl = document.getElementById('scores');
 var timerEl = document.getElementById('timer');
-var currentCategoryEl = document.getElementById('score-category')
+var currentCategoryEl = document.getElementById('score-category');
+var ratingEl = document.getElementsByClassName('rating');
 var chances=1,points=0,correct=0,timer=0,time,allInfo=[],totalQues=0,shuffledArr,correctOption,width=0,maxScore=0,ratio=0;
 
-
+maxScore = localStorage.getItem('max-score');
+if(maxScore===null)maxScore=0;
 
 var newArr = [];
 (window.location.search).slice(1).split('&').forEach((arr)=>{
@@ -24,7 +26,7 @@ function closeNav() {
 
 function resultNav() {
 	ratio = (correct/(totalQues-1))*100;
-	ratio = ratio.toPrecision(2);
+	ratio = ratio.toFixed(2);
 if(ratio==NaN)ratio=0;
 
   document.getElementById("resultNav").style.height = "100%";
@@ -56,13 +58,14 @@ const quizGenerator = async () =>{
 	}
 	quizShow();
 }
-maxScore = localStorage.getItem('max-score');
+
 
 const quizShow = () => {
 	timer=0;
 	if(totalQues<Number(newArr[2])){
 		if(points<0)points==0;
 		scoresEl.innerHTML = `Scores : ${points}`;
+		document.getElementById('max-score').innerHTML = `Max-Score : ${maxScore}`;
 	 	chances=1;
 
 	 	quesEl.innerHTML = `${allInfo[totalQues].question}`;
@@ -91,29 +94,53 @@ const quizShow = () => {
 	}
 	totalQues+=1;
 	if(totalQues>(Number(newArr[2]))){
+		if(points>=localStorage.getItem('max-score'))
+		localStorage.setItem('max-score',points);
 		timerEl.style.display = 'none';
 		document.getElementById('next').addEventListener(onclick,resultNav());
 	}	
+	myTimer();
+}
+
+function myTimer(){
 	timer = 0;
 	 time = setInterval(()=>{
 		timer+=1;
 		timerEl.innerHTML = `Timer : ${timer}s`;
 		if(timer>=15){
+			clearInterval(time);
 			if(points<=0)points=0;
 			else points-=5;
 			scoresEl.innerHTML = `Scores : ${points}`;
-			clearInterval(time);
 			chances--;
 			var index = shuffledArr.indexOf(correctOption);
 			optionsEl[index].style.backgroundColor = 'green';
 			optionsEl[index].classList.add('style');
 		}
-	},1000);
+	},1000); 
+}
+
+function repeat(){
+	clearInterval(time);
+	timer=1;
+	timerEl.innerHTML = `Timer : ${timer}s`;
+	points = 0;
+	totalQues = 0;
+	width = 0;
+	allInfo = [];
+	timerEl.style.display = 'block';
+	correct=0;
+	document.getElementById('next').innerHTML = `Next`;
+	quizGenerator();
+	move();
+	myTimer();
+	if(points>=localStorage.getItem('max-score'))
+		localStorage.setItem('max-score',points);
 }
 
 function move() {
     var elem = document.getElementById("myBar"); 
-    		var inc = 100/Number(newArr[2]);
+    		var inc = parseInt(100/Number(newArr[2]));
             width+=inc; 
             if(width>=100){
             	width=100;
@@ -145,5 +172,6 @@ function move() {
 				scoresEl.innerHTML = `Scores : ${points}`;
 			return '#D60707'	
 			}	
-		}	
+		}		
 }
+
