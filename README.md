@@ -20,12 +20,12 @@ A simple quiz game ,with different categories to choose from..
 12. Their will be repeat button ,which will refresh the page and also resets the score.
 13. The link 'Go Back' will return to the home page. 
 
-Visit the website  : https://bamboozled.netlify.com/;
+# Refrences and Third Party API : 
+1. https://www.w3schools.com/
+2. https://stackoverflow.com/
+3. https://codepen.io/
 
 Quiz API used : https://opentdb.com/api_config.php
-
-This app consist of many third party source code and ideas.
-So binding it all,Thank You!
 
   
 Any queries,suggestions and problems are very important for the advancement of the app,for that please mail me at sakshammanocha14@gmail.com.
